@@ -440,6 +440,14 @@ do
   --  Check out: https://github.com/nvim-mini/mini.nvim
 end
 
+
+  -- [[ nvim-tree.lua ]]
+  --  A file explorer tree for neovim written in lua
+  vim.pack.add { gh 'nvim-tree/nvim-tree.lua' }
+  require('nvim-tree').setup()
+  vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', { desc = 'nvimtree toggle window' })
+  vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
+
 -- ============================================================
 -- SECTION 5: SEARCH & NAVIGATION
 -- Telescope setup, keymaps, LSP picker mappings
